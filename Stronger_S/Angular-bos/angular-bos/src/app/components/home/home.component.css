@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Cuando usemmos paddin sea perfecto*/
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    font-family: 'Courier New', Courier, monospace; 
+    position: fixed;   /*Para que se mantenga encima de todo*/
+    top: 0;            /*Mantenga pegado de todo*/
+    right: 0;          /*Encima de todo*/
+    z-index: 100;
+    background: #7a7a7a;
+
+}
+
+.container__header{
+    max-width: 1200px;
+    height: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    margin: auto; 
+    padding: 0px 20px; 
+}
+
+header .logo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.container__nav{
+    position: relative;
+    height: 100%;
+}
+
+nav{
+    height: 100%
+}
+
+nav ul{
+    height: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+nav ul li{
+    margin: 0px 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    color:white;
+    font-size: 14px; 
+}
+
+.select{
+    background-color: blue; 
+    padding: 10px 30px;
+    border-radius: 20px; 
+    color: #EFF3F5
+}
+
+/*Portada de cover*/
+.cover{
+    width: 100%;
+    padding-bottom: 60px;
+    font-family: 'Anton', sans-serif;
+    margin-top: 100px;
+}
+
+.container__cover{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    position: relative;
+}
+
+.cover .container__info{
+    max-width: 400px;
+    margin-top: 40px;
+    z-index: 2;
+}
+
+.cover h1{
+    max-width: 400px;
+    font-size: 60px;
+    font-weight: 900;
+    color: #373737;
+}
+
+.cover h2{
+    font-size: 60px;
+    font-weight: 900;
+    color: #FEBA0B;
+    margin-top: -30px; 
+}
+
+.cover p{
+    margin-top: 10px;
+
+}
+
+.cover input[type = "button"]{
+    padding: 10px 40px; 
+    margin-top: 40px;
+    font-size:  18px; 
+    font-weight: 600;
+    border: none; 
+    color: white; 
+    background-color: #FEBA0B;
+    border-radius: 20px; 
+    box-shadow: 1px 1px 30px --5px #202020;
+    cursor: pointer; 
+    transition: box-shadow 500ms; 
+}
+
+.cover input[type = "button"]:hover{
+    box-shadow: 1px 1px 30px -5px #20202085;
+}
+
+
+/*-------------------------------------------------------------------------------------*/
+
+
+.container__article{
+    max-width: 1000px;
+    padding: 0px 20px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container__article .box__article{
+    width: 200px;
+    height: 250px;
+    background: var(--color-esqueleto);
+    margin: 20px;
+}
+
+.container__vector img{
+    position:static;
+    bottom: 20px;
+    right: 0px;
+    width: 300px;
+    margin: 0px 100px;
+}
+
+.container__article{
+    max-width: 1000px;
+    padding: 0px 20px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container__article .box__article{
+    width: 200px;
+    height: 250px;
+    background: var(--color-esqueleto);
+    margin: 20px;
+}
+
+/*AQUI COMIENZA EL FOOTER*/
+
+footer{
+    width: 100%;                                                     /*Ancho*/
+    padding: 50px 0px;                                              /*Dejar espacion (Margen)*/
+    font-family: 'Nunito', sans-serif;                              /*Tipo de letra*/
+   /* *background-color: var(--color-esqueleto);                      /**/
+    /*background-image: url("../Images/background-footer.svg");       /*Colocamos la imagen del footer*/
+    /*background-size: cover;                                          /*Para que la imagen se adapte y bonita*/
+
+    /*webkit-mask-image: url("../Images/background-footer.svg");
+    mask-image: url("../Images/background-footer.svg");
+    bacgroudn color: tal;
+    
+    -webkit-mask-size: cover;
+    mask-size: cover;*/
+}
+
+.container__footer{
+    display: flex;              /*Para poner las columnas una del lado de otra*/
+    flex-wrap: wrap;            /* Para que esa manera se ponga una de bajo de otra (para que se adapte)*/
+    justify-content: space-between; /*Para que mantenga una posicion estirada (ocupar el ancho completo del proyecto)*/
+    max-width: 1200px;          /*Define el ancho maximo de una elemento*/    
+    margin: auto;                   /*Conteneder se mantenga centrado*/
+    padding-top: 100px;         /*Para bajar el contenedor */
+}
+
+.box__footer{
+    display: flex;              /*Hacemos que sea flexible (Para que sus elementos se ponga un de bajo de otro para ello)*/
+    flex-direction: column;     /*Las cajas tendran un flext-direction: columm (que se pongan en forma de columna)*/
+    padding: 40px;              /*Mantengan un pequeño margen*/
+}
+
+.box__footer .logo img{    /*Nos posicionamos en el logo*/
+    width: 180px;           /*Ancho*/
+}
+
+
+.box__footer .terms{        /*Nos posicionamos en los terminos */
+    max-width: 350px;       /*Tamaño maximo del elemento*/
+    margin-top: 20px;       /*Se despega del logo*/
+    font-weight: 500;       /*Que tan grueso o delgado deben mostrarse los caracteres del texto */
+    color: #7a7a7a;        /*Color */
+    font-size: 18px;          /*Propiedad que establece el tamaño de la fuente  */
+
+}
+
+.box__footer h2{        /*Seleccionamos todos los h2*/
+    margin-bottom: 30px;        /*De esta manera espaciado entre el titulo y los links*/
+    color: #242424;         /*Color*/
+    font-weight: 700;       /*Que tan grueso o delgado deben mostrarse los caractereres*/
+}
+
+.box__footer a{         /*Seleccionamos todos los a*/
+    margin-top: 10px;   /*Para que esten aliniados*/
+    color: #7a7a7a;     /*El mismo color del parrafo*/
+    font-weight: 600;       /*Tamaño del la letra o grueso*/
+}
+
+.box__footer a:hover{           
+    opacity: 0.8;       
+}
+
+.box__footer a .fab{
+    font-size: 20px; /*incrementar el tamaño de los inconos*/
+}
+
+.box__copyright{
+    max-width: 1200px; /*Tamaño*/
+    margin: auto;       /*Margen automatico*/
+    text-align: center; /*Centre todo el texto*/
+    padding: 0px 40px; /*Padding 0 de los costados*/
+}
+
+.box__copyright p{
+    margin-top: 20px; /*Esapciado del hr */
+    color: #7a7a7a;  /*Color*/
+}
+
+.box__copyright hr{
+    border: none;  /*sin boder*/
+    height: 1px;
+    background-color: #7a7a7a;
+}
